@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== BOXICONS ===============-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <style>
+        /* Additional CSS for 5 columns */
+        .modal__content {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 20px;
+            align-items: center;
+            text-align: center;
+        }
+
+        .modal__content img {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            border-radius: 50%; /* Optional: Add border-radius for a circular image */
+        }
+    </style>
+
+    <title>Responsive Modal Popup</title>
+</head>
+
+<body>
+    <section class="modal container">
+        <!-- Remove the "Open Modal" button -->
+        <div class="modal__container" id="modal-container">
+            <div class="modal__content">
+                <div class="modal__close close-modal" title="Close">
+                    <i class='bx bx-x'></i>
+                </div>
+
+                <div class="column">
+                    <img src="assets/img/supplements.jpg" alt="User 1" class="modal__img">
+                    <p>Suppliments & Vitamins</p>
+                </div>
+
+                <div class="column">
+                    <img src="assets/img/yoga.jpg" alt="User 1" class="modal__img">
+                    <p>Yoga & Meditation</p>
+                </div>
+
+                <div class="column">
+                    <img src="assets/img/diet.jpg" alt="User 1" class="modal__img">
+                    <p>Food Diet</p>
+                </div>
+
+                <div class="column">
+                    <img src="assets/img/doctor.jpg" alt="User 2" class="modal__img">
+                    <p>Doctor</p>
+                </div>
+
+                <div class="column">
+                    <button class="modal__button-link close-modal">
+                        Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="assets/js/main.js"></script>
+
+    <script>
+        // Add script to open the modal on page load
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('modal-container').classList.add('show-modal');
+        });
+    </script>
+</body>
+
+</html>
